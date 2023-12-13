@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /*background-image: url('back.mp4');*/
+    background-color: #ffffff;
+    background-size: cover;
+    color: #000000;
+    /*border: 1px solid #fff;*/
+  }
+
+  .loading-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f000;
+    margin-left: -325px;
+    margin-top: -55px;
+  }
+  
+  #loading-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #logo {
+    width: 200px;
+    height: 100px;
+    margin-bottom: -60px;
+    margin-top: -70px;
+  }
+  
+  #loading-bar-container {
+    width: 100%;
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 50px;
+    border: 1px solid #ff0000;
+    animation: glowAnimation 1s infinite;
+  }
+  
+  #loading-bar {
+    height: 100%;
+    background-color: #00ff15;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  #random-text {
+    font-size: 12px;
+    color: #000000;
+    margin-top: -38px;
+    font-style: normal;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    /*color: #f0f0f0;*/
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    font-style:normal;
+    font-size: 12px;
+  }
+
+  @keyframes glowAnimation {
+    0% {
+      box-shadow: 0 0 5px rgba(60, 185, 49, 0.8);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(28, 194, 13, 0.8);
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(0, 255, 42, 0.8);
+    }
+  }
+  
+  #dark-mode-switch {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: -160px;
+  }
+  
+  #dark-mode-switch label {
+    margin-right: 10px;
+  }
+  
+  #dark-mode-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 41px;
+    height: 20px;
+    background-color: #000000;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  #dark-mode-checkbox::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #dark-mode-checkbox:checked::before {
+    transform: translateX(20px);
+    background-color: #15ff00;
+  }
+  
+  
+  
